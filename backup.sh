@@ -1,18 +1,26 @@
 # mac backup script
 
 function brewBackup(){
-		brew list >> ./lists/brew-list.txt
+		brew list > ./lists/brew-list.txt
+}
+function brewTapBackup(){
+		brew tap > ./lists/brewtap-list.txt
 }
 
 function brewCaskBackup(){
-		brew cask list >> ./lists/brewcask-list.txt
+		brew cask list > ./lists/brewcask-list.txt
 }
 
 function masBackup(){
-		mas list >> ./lists/mas-list.txt
+		mas list > ./lists/mas-list.txt
 }
 
-brewBackup
-brewCaskBackup
-masBackup
+function backupDotsfiles(){
+		dotz backup
+}
+
+brewTapBackup
+# brewBackup
+# brewCaskBackup
+# masBackup
 

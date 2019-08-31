@@ -5,6 +5,12 @@ function installHomeBrew(){
 		cd ~
 		/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 }
+function restoreBrewTap(){
+		while read line
+		do
+				brew tap $line
+		done < ./lists/brewcask-list.txt
+}
 function restoreBrew () {
 		while read line
 		do
@@ -35,26 +41,20 @@ function restoreMacOSConfig(){
 
 		# dockに表示されるショートカットを起動中のみにする(要killall Dock)
 		defaults write com.apple.dock static-only -bool true
-
-		# 
 }
 
-# intsall homebrew
-  # related in xcode comannnd line tools,
 
-# install for brew CLI app
+function restoreDotfiles(){
+ 		dotz restore
+}
+
+
+
+
+# execute restore function
+installHomebrew
+restoreBrewTap
 restoreBrew
-
-# install for brewCask GUI app
 restoreBrewCask
-
-# brew cask-upgrade install 
-brew tap buo/cask-upgrade
-
-# restore for appstore app
 restoreAppstore
 
-# restore for dotfiles
-brew install homeshick
-cd ~
-homeshick clone magcho/dotfiles
