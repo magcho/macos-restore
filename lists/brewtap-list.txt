@@ -6,6 +6,7 @@ homebrew/cask-fonts
 homebrew/cask-versions
 homebrew/core
 homebrew/services
+magcho/magcho
 mengbo/ch340g-ch34g-ch34x-mac-os-x-driver
 nyuichi/satysfi
 vitorgalvao/tiny-scripts

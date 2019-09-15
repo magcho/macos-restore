@@ -20,7 +20,7 @@ function backupDotsfiles(){
 }
 
 brewTapBackup
-# brewBackup
-# brewCaskBackup
-# masBackup
+brewBackup
+brewCaskBackup
+masBackup
 

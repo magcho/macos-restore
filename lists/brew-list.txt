@@ -7,6 +7,8 @@ cask-repair
 cloc
 cmake
 coreutils
+dep
+dotz
 emacs
 ffmpeg
 fish
@@ -19,6 +21,7 @@ fribidi
 fzf
 gdbm
 gettext
+gibo
 giflib
 git
 git-flow-avh
@@ -88,6 +91,7 @@ opam
 opencore-amr
 openjpeg
 openssl
+openssl@1.1
 opus
 p11-kit
 p7zip
