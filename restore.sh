@@ -1,4 +1,4 @@
-# mac restore shell script 
+# mac restore shell script
 
 function installHomeBrew(){
 		# homebrewのインストール過程でxcode command line toolsもインストールされるため、xcode単体のインストールは不要
@@ -9,7 +9,7 @@ function restoreBrewTap(){
 		while read line
 		do
 				brew tap $line
-		done < ./lists/brewcask-list.txt
+		done < ./lists/brewtap-list.txt
 }
 function restoreBrew () {
 		while read line
@@ -28,7 +28,7 @@ function restoreAppstore () {
 		while read line
 		do
 				mas install $(awk '{print $1}' <<<${line})
-				
+
 		done < ./lists/mas-list.txt
 }
 
@@ -41,7 +41,7 @@ function restoreMacOSConfig(){
 		defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Downloads/"
 		# finerのパスバーにフルパスを表示する
 		defaults write com.apple.finder ShowPathbar -bool true
-		
+
 		# ウィンド単位のスクリーンショットで影をデフォルトでなくす
 		defaults write com.apple.screencapture disable-shadow -boole true
 
@@ -50,7 +50,7 @@ function restoreMacOSConfig(){
 		# dockを自動的に隠す
 		defaults write com.apple.dock autohide -bool true
 		# dockのアイコンサイズ変更
-		defaults write com.apple.dock tilesize -int 30		
+		defaults write com.apple.dock tilesize -int 30
 }
 
 
@@ -62,9 +62,8 @@ function restoreDotfiles(){
 
 
 # execute restore function
-installHomebrew
+# installHomebrew
 restoreBrewTap
 restoreBrew
-restoreBrewCask
-restoreAppstore
-
+# restoreBrewCask
+# restoreAppstore
