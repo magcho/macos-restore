@@ -1,9 +1,11 @@
 aom
 autoconf
 automake
+bat
 cairo
 cask
 cask-repair
+clang-format
 cloc
 cmake
 coreutils
@@ -19,6 +21,7 @@ freetype
 frei0r
 fribidi
 fzf
+gcc
 gdbm
 gettext
 gibo
@@ -40,6 +43,7 @@ hr
 hub
 icu4c
 imageoptim-cli
+isl
 jemalloc
 jpeg
 lame
@@ -52,6 +56,7 @@ libgcrypt
 libgpg-error
 libidn2
 libimobiledevice
+libmpc
 libogg
 libplist
 libpng
@@ -79,6 +84,7 @@ luajit
 lzo
 make
 mas
+mpfr
 msgpack
 ncurses
 neovim
@@ -88,6 +94,7 @@ nmap
 node
 ocaml
 opam
+openblas
 opencore-amr
 openjpeg
 openssl
@@ -101,14 +108,12 @@ pcre2
 perl
 pixman
 pkg-config
-pyenv
 python
-python@2
+r
 readline
 rtmpdump
 rubberband
 ruby
-satysfi
 sdl2
 sfmono-square
 snappy

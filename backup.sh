@@ -16,7 +16,7 @@ function masBackup(){
 }
 
 function backupDotsfiles(){
-		dotz backup
+		dotz backup -p
 }
 
 brewTapBackup
