@@ -39,8 +39,10 @@ function restoreMacOSConfig(){
 		chflags nohidden ~/Library
 		# finderの初期表示ディレクトリをダウンロードにする
 		defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Downloads/"
-		# finerのパスバーにフルパスを表示する
+		# finderのパスバーにフルパスを表示する
 		defaults write com.apple.finder ShowPathbar -bool true
+		
+		killall Finder
 
 		# ウィンド単位のスクリーンショットで影をデフォルトでなくす
 		defaults write com.apple.screencapture disable-shadow -boole true
@@ -51,6 +53,10 @@ function restoreMacOSConfig(){
 		defaults write com.apple.dock autohide -bool true
 		# dockのアイコンサイズ変更
 		defaults write com.apple.dock tilesize -int 30
+		# dockを左に
+		defaults write com.apple.Dock orientation -string left
+		
+		killall Dock
 }
 
 
