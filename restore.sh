@@ -3,7 +3,7 @@
 function installHomeBrew(){
 		# homebrewのインストール過程でxcode command line toolsもインストールされるため、xcode単体のインストールは不要
 		cd ~
-		/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+		/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 }
 function restoreBrewTap(){
 		while read line
