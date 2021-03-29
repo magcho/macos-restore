@@ -82,7 +82,7 @@ main(){
 				fi
 
 				
-				if [ type dotz > /dev/null 2>&1 ]; then
+				if ! ( type dotz > /dev/null 2>&1 ); then
 						echo '# Install Dotz'
 						brew tap magcho/magcho
 						brew install dotz
